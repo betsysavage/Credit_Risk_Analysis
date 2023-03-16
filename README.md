@@ -34,6 +34,7 @@ After using this resampled data to train a logistic regression model, we can the
 * **Accuracy:** A balanced accuracy score of 65.47 indicates that the model correctly predicts 65% of the classifications
 * **Precision:** The positive predicted value indicates how reliable a positive classification is. The precision of 1.00 for the low-risk class tell us that if this model classifies a candidate as low-risk, there is 100% likelihood that they belong in this category. However, the precision of 0.01 for the high-risk group is very low, meaning that if a person is categorized as high-risk for a loan, it is very unlikely that they are actually high risk.  
 * **Recall/Sensitivity:** Sensitivity refers to the likelihood that actual high-risk applicants will be identified by the model. A recall of 0.72 for the high risk category indicates that the model performs well in identifying high-risk applicants. 
+* **F1 Score:** An F1 score is the harmonic mean describing the relationship between precision and sensitivity. A major imbalance between the precision and recall for a class will result in a low F1 score. For this model, the F1 score for the high-risk class is low (0.02) because the model has poor precision but good recall.
 
 The code generating the metrics above is shown here:
 <img width="586" alt="image" src="https://user-images.githubusercontent.com/114873837/225749290-54d03ec5-ae13-4f75-8ce6-1e23aaf8fd79.png">
@@ -52,6 +53,7 @@ This logistic regression model results in the following performance measures:
 * **Accuracy:** A balanced accuracy score of 66.2 indicates that the model correctly predicts 66% of the classifications
 * **Precision:** The precision measures are the same as the previous model. The model performs well in positively predicting the low risk classification but poorly in predicting the high risk category.
 * **Recall/Sensitivity:** A recall of 0.63 for the high risk category indicates that the model does not perform as well as the previous model in correctly identifying the actual high-risk candidates.
+* **F1 Score:** Like the previous model, the F1 score for the high-risk class is low (0.02) because the model has poor precision but good recall.
 
 The code generating the metrics above is shown here:
 <img width="645" alt="image" src="https://user-images.githubusercontent.com/114873837/225749633-49a8008e-bee4-4444-b326-cdf8f91be75f.png">
@@ -68,7 +70,8 @@ The undersampling technique utilized the ClusterCentroids algorithm. After using
 The logistic regression model run with the undersampling produces the following performance indicators:
 * **Accuracy:** A balanced accuracy score of .544 indicates that the model correctly predicts 54% of the classifications
 * **Precision:** The undersampling method also demonstrates poor precision (0.01) for the high_risk group, meaning that if a candidate is flagged as high risk, it is unlikely they belong to that category. 
-* **Recall/Sensitivity** A recall of 0.69 for the high risk category indicates that the model performs adequately in identifying the true high-risk borrowers.
+* **Recall/Sensitivity** A recall of 0.69 for the high risk category indicates that the model performs adequately (but not particularly well) in identifying the true high-risk borrowers.
+* **F1 Score:** The F1 score of this model is the lowest yet for the high-risk group, reflecting the imbalance between precision and recall 
 
 <img width="539" alt="image" src="https://user-images.githubusercontent.com/114873837/225749981-9639e56d-49d0-4a9f-aaa8-52d2d6cfa808.png">
 
@@ -78,12 +81,51 @@ The logistic regression model run with the undersampling produces the following 
 
 ### Deliverable 2: SMOTEENN Model
 
+The previous models demonstrated both over- and undersamping. A SMOTEENN model combines both techniques by oversampling the minority class and then cleaning the data with undersampling. The overall goal of this strategy is to reduce outliers and separate the two classes more distinctly. The code for the SMOTEENN resampling is below. After the resampling is complete, a counter shows that the two groups are balanced but not perfectly equal.
+
+<img width="700" alt="image" src="https://user-images.githubusercontent.com/114873837/225761130-22cb1c83-6a58-4edc-82bb-11a6374b5647.png">
+
+After training the logistic regression model with the resampled data and using the testing data to make predictions, the performance of the model can be assessed on the following measures:
+
+* **Accuracy:** A balanced accuracy score of .666 indicates that the model correctly predicts 67% of the classifications
+* **Precision:** Like the previous resampling methods, the SMOTEENN tecnhique also demonstrates poor precision (0.01) for the high_risk group, meaning that if a candidate is flagged as high risk, it is unlikely they belong to that category. 
+* **Recall/Sensitivity** A recall of 0.72 for the high risk category indicates that the model performs well in identifying the true high-risk borrowers.
+* **F1 Score:** The F1 score of this model is 0.02, reflecting there is an imbalance between precision and recall for the high-risk class 
+
+
 
 ### Deliverable 3: Ensemble Classifiers
 
+In an effort to strengthen the performance of models, we now test techniques for ensemble learning. Ensemble learning refers to the combination of multiple models and algorithms to improve the performance and accuracy of predictions. In this analysis, two ensemble classifiers are compared: BalancedRandomForestClassifier and EasyEnsembleClassifier.
+
+**Ensemble with Balanced Random Forest Classifier
+
+The performance of the model can be assessed on the following measures:
+
+* **Accuracy:** A balanced accuracy score of .787 indicates that the model correctly predicts 79% of the classifications
+* **Precision:** While the precision of this model in predicting high risk candidates is still poor (0.04), it exceeds the other resampling models. 
+* **Recall/Sensitivity** A recall of 0.67 for the high risk category indicates that the model performs adequately in identifying the true high-risk borrowers.
+* **F1 Score:** The F1 score of this model is 0.07, reflecting that the ensemble technique has improved the balance between precision and recall - Though it is still very low for the high-risk group.
+
+<img width="514" alt="image" src="https://user-images.githubusercontent.com/114873837/225763684-c1511a71-daf3-4fc4-a77a-c34939b3d51d.png">
+
+<img width="783" alt="image" src="https://user-images.githubusercontent.com/114873837/225763738-cf8b8737-911d-4876-838b-67153aa75748.png">
+
+**Ensemble with Easy Ensemble Classifier
+
+The performance of the model can be assessed on the following measures:
+
+* **Accuracy:** A balanced accuracy score of .919 indicates that the model correctly predicts 92% of the classifications. This is the highest accuracy of any of the models.
+* **Precision:** While the precision of this model in predicting high risk candidates is still poor (0.04), it exceeds the other resampling models. 
+* **Recall/Sensitivity** A recall of 0.9 for the high risk category indicates that the model identifies the vast majority of actual high-risk loan candidates
+* **F1 Score:** The F1 score of this model is 0.14 for high risk, reflecting the best ratio between precision and recall of the models.
+
+<img width="573" alt="image" src="https://user-images.githubusercontent.com/114873837/225764596-6286a95f-5a62-45e3-a301-fb049b8d93f5.png">
+
+<img width="802" alt="image" src="https://user-images.githubusercontent.com/114873837/225764660-43edb7df-01da-46f4-8ec8-cecd50e0d20c.png">
 
 ## Summary
-The best model performances (as measured by accuracy, precision, and recall) were observed in the ensemble modeling techniques. the Easy Ensemble Classifier was the clear winner. 
+The best model performances (as measured by accuracy, precision, recall, and F1 scores) were observed in the ensemble modeling techniques. the Easy Ensemble Classifier was the clear winner. 
 
 * Random Oversampling: 65.47% accuracy, 1% precision, 72% recall, .02 F1 score
 * SMOTE Resampling: 66.2% accuracy, 1% precision, 63% recall, .02 F1 score
