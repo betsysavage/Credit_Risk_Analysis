@@ -23,55 +23,56 @@ The two oversampling techniques used were RandomOverSampler and SMOTE. Within th
 
 <img width="479" alt="image" src="https://user-images.githubusercontent.com/114873837/225688660-847509fe-108f-41fa-b680-5d6efa5f11e2.png">
 
+**Oversampling with Random Oversampler**
 After instantiating the RandomOverSampler command and resampling the data in pandas, we can confirm that the minority class has been enlarged to a better balance between groups.
 
 <img width="499" alt="image" src="https://user-images.githubusercontent.com/114873837/225689284-436f0f8c-5b93-4924-b92c-ae8c792fcfec.png">
 
 
-After using this resampled data to train a logistic regression model, we generate the following results for the :
-* A balanced accuracy score of 65.47
-* 
+After using this resampled data to train a logistic regression model, we can then assess the performance of the model on the following measures:
+* **Accuracy:** A balanced accuracy score of 65.47 indicates that the model correctly predicts 65% of the classifications
+* **Precision:** The positive predicted value indicates how reliable a positive classification is. The precision of 1.00 for the low-risk class tell us that if this model classifies a candidate as low-risk, there is 100% likelihood that they belong in this category. However, the precision of 0.01 for the high-risk group is very low, meaning that if a person is categorized as high-risk for a loan, it is very unlikely that they are actually high risk.  
+* **Recall/Sensitivity:** Sensitivity refers to the likelihood that actual high-risk applicants will be identified by the model. A recall of 0.72 for the high risk category indicates that the model performs well in identifying high-risk applicants. 
 
-
+The code generating the metrics above is shown here:
 <img width="586" alt="image" src="https://user-images.githubusercontent.com/114873837/225749290-54d03ec5-ae13-4f75-8ce6-1e23aaf8fd79.png">
 
 <img width="404" alt="image" src="https://user-images.githubusercontent.com/114873837/225749404-9a6fa644-3d2e-49b0-b453-b2475b8f6a39.png">
 
 <img width="700" alt="image" src="https://user-images.githubusercontent.com/114873837/225749470-65cb22fe-d07d-49d3-a80f-cc222d076d6c.png">
 
-
+**Oversampling with SMOTE**
 When using the SMOTE algorithm, we achieve the same resampling count as the RandomOverSampler method. 
 
 <img width="590" alt="image" src="https://user-images.githubusercontent.com/114873837/225695928-5437d856-2f97-45f7-9981-5146aee0412f.png">
 
 This logistic regression model results in the following performance measures:
-* A balanced accuracy score of 66.2
-* 
-* 
+* **Accuracy:** A balanced accuracy score of 66.2 indicates that the model correctly predicts 66% of the classifications
+* **Precision:** The precision measures are the same as the previous model. The model performs well in positively predicting the low risk classification but poorly in predicting the high risk category.
+* **Recall/Sensitivity:** A recall of 0.63 for the high risk category indicates that the model does not perform as well as the previous model in correctly identifying the actual high-risk candidates.
 
+The code generating the metrics above is shown here:
 <img width="645" alt="image" src="https://user-images.githubusercontent.com/114873837/225749633-49a8008e-bee4-4444-b326-cdf8f91be75f.png">
 
 <img width="383" alt="image" src="https://user-images.githubusercontent.com/114873837/225749719-0a5fb23a-b687-42f1-822f-3ada8996d364.png">
 
 <img width="670" alt="image" src="https://user-images.githubusercontent.com/114873837/225749804-c641bc05-b23a-4e2c-8063-3f433acf5f9f.png">
 
-
 ### Undersampling
 The undersampling technique utilized the ClusterCentroids algorithm. After using the ClusterCentroids algorithm, we can confirm that the majority class has been reduced to establish a balance between the classes.
 
 <img width="577" alt="image" src="https://user-images.githubusercontent.com/114873837/225691381-0b9947f1-b4f4-4a10-8df8-9a38f2404ae2.png">
 
-The logistic regression model run with the resampled data produces the following results:
-*
-*
-*
+The logistic regression model run with the undersampling produces the following performance indicators:
+* **Accuracy:** A balanced accuracy score of .544 indicates that the model correctly predicts 54% of the classifications
+* **Precision:** The undersampling method also demonstrates poor precision (0.01) for the high_risk group, meaning that if a candidate is flagged as high risk, it is unlikely they belong to that category. 
+* **Recall/Sensitivity** A recall of 0.69 for the high risk category indicates that the model performs adequately in identifying the true high-risk borrowers.
 
 <img width="539" alt="image" src="https://user-images.githubusercontent.com/114873837/225749981-9639e56d-49d0-4a9f-aaa8-52d2d6cfa808.png">
 
 <img width="393" alt="image" src="https://user-images.githubusercontent.com/114873837/225750060-38ce971f-482c-43eb-8acb-8f39fc9cc49e.png">
 
 <img width="673" alt="image" src="https://user-images.githubusercontent.com/114873837/225750148-95482ec4-4c74-4cfa-8b94-f4a1b12de090.png">
-
 
 ### Deliverable 2: SMOTEENN Model
 
