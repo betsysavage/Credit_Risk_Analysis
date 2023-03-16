@@ -134,4 +134,6 @@ The best model performances (as measured by accuracy, precision, recall, and F1 
 * Balanced Random Forest Classifier: 78.8% accuracy, 4% precision, 67% recall, .07 F1 score
 * Easy Ensemble Classifier: 91.9% accuracy, 7% precision, 90% recall, .14 F1 score
 
-Based on the results, I would recommend using the Easy Ensemble Classifier to predict credit lending risk.
+### Recommendations
+
+Based on the results, I would recommend using the Easy Ensemble Classifier to predict credit lending risk. Precision in predicting the high risk category was a challenge for all of these models, meaning that someone classified as "high risk" was often flagged incorrectly. It is possible that this pattern could lead to discriminatory practices against certain trustworthy loan candidates, so it is best to be mindful of improving the F1 score where possible. 
