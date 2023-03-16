@@ -92,7 +92,7 @@ After training the logistic regression model with the resampled data and using t
 * **Recall/Sensitivity** A recall of 0.72 for the high risk category indicates that the model performs well in identifying the true high-risk borrowers.
 * **F1 Score:** The F1 score of this model is 0.02, reflecting there is an imbalance between precision and recall for the high-risk class 
 
-
+<img width="1056" alt="image" src="https://user-images.githubusercontent.com/114873837/225769809-0290b977-11cb-4aa2-936f-d3cadcb3c4cf.png">
 
 ### Deliverable 3: Ensemble Classifiers
 
