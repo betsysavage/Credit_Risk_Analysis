@@ -14,6 +14,15 @@ The purpose of this analysis is to use Python to build and assess the performanc
 * Imbalance-learn
 
 ## Results
+Before instantiating any machine learning models, we prepared the data for analysis by reading a certain subset of columns from the dataset, dropping null values, reformating data types (from strings and percentages to numbers), and consolidating values for loan statuses into two risk categories: low-risk and high-risk. Then we identified the feature and target values (the independent x and dependent y variables, respectively) to be used in all models. Once this initial data processing was completed, the data was ready to be split into training and testing groups to be used in the machine learning models.
+
+### Deliverable 1: Resampling Models
+
+
+### Deliverable 2: SMOTEENN Model
+
+
+### Deliverable 3: Ensemble Classifiers
 
 
 ## Summary
