@@ -31,7 +31,14 @@ After instantiating the RandomOverSampler command and resampling the data in pan
 After using this resampled data to train a logistic regression model, we generate the following results for the :
 * A balanced accuracy score of 65.47
 * 
-* 
+
+
+<img width="586" alt="image" src="https://user-images.githubusercontent.com/114873837/225749290-54d03ec5-ae13-4f75-8ce6-1e23aaf8fd79.png">
+
+<img width="404" alt="image" src="https://user-images.githubusercontent.com/114873837/225749404-9a6fa644-3d2e-49b0-b453-b2475b8f6a39.png">
+
+<img width="700" alt="image" src="https://user-images.githubusercontent.com/114873837/225749470-65cb22fe-d07d-49d3-a80f-cc222d076d6c.png">
+
 
 When using the SMOTE algorithm, we achieve the same resampling count as the RandomOverSampler method. 
 
@@ -42,6 +49,13 @@ This logistic regression model results in the following performance measures:
 * 
 * 
 
+<img width="645" alt="image" src="https://user-images.githubusercontent.com/114873837/225749633-49a8008e-bee4-4444-b326-cdf8f91be75f.png">
+
+<img width="383" alt="image" src="https://user-images.githubusercontent.com/114873837/225749719-0a5fb23a-b687-42f1-822f-3ada8996d364.png">
+
+<img width="670" alt="image" src="https://user-images.githubusercontent.com/114873837/225749804-c641bc05-b23a-4e2c-8063-3f433acf5f9f.png">
+
+
 ### Undersampling
 The undersampling technique utilized the ClusterCentroids algorithm. After using the ClusterCentroids algorithm, we can confirm that the majority class has been reduced to establish a balance between the classes.
 
@@ -51,6 +65,13 @@ The logistic regression model run with the resampled data produces the following
 *
 *
 *
+
+<img width="539" alt="image" src="https://user-images.githubusercontent.com/114873837/225749981-9639e56d-49d0-4a9f-aaa8-52d2d6cfa808.png">
+
+<img width="393" alt="image" src="https://user-images.githubusercontent.com/114873837/225750060-38ce971f-482c-43eb-8acb-8f39fc9cc49e.png">
+
+<img width="673" alt="image" src="https://user-images.githubusercontent.com/114873837/225750148-95482ec4-4c74-4cfa-8b94-f4a1b12de090.png">
+
 
 ### Deliverable 2: SMOTEENN Model
 
