@@ -1,9 +1,10 @@
 # Credit_Risk_Analysis
 
 ## Overview
+Machine learning models are often used by financial institutions to help predict risks when making loans. In this challenge, a hypothetical client, Fast-Lending, is a peer-to-peer lending company looking to utilize an effective machine learning model to quickly and reliably identify loan applicants who may be considered "low-risk" or "high-risk." It is believed that by making accurate predictions, the company can reduce the number of people who default on their loans.
 
 ### Purpose
-The purpose of this analysis is to assess the performance of various machine learning models to predict credit risk. 
+The purpose of this analysis is to use Python to build and assess the performance of various machine learning models to predict credit risk. The model options are built using a variety of techniques such as resampling (oversampling and undersampling) and emsemble learning. The performance - how well the model can predict default - will be assessed based on accuracy, precision, and recall.
 
 ### Resources
 * "LoanStats_2019Q1" CSV file
