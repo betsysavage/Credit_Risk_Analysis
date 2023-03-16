@@ -24,6 +24,7 @@ The two oversampling techniques used were RandomOverSampler and SMOTE. Within th
 <img width="479" alt="image" src="https://user-images.githubusercontent.com/114873837/225688660-847509fe-108f-41fa-b680-5d6efa5f11e2.png">
 
 **Oversampling with Random Oversampler**
+
 After instantiating the RandomOverSampler command and resampling the data in pandas, we can confirm that the minority class has been enlarged to a better balance between groups.
 
 <img width="499" alt="image" src="https://user-images.githubusercontent.com/114873837/225689284-436f0f8c-5b93-4924-b92c-ae8c792fcfec.png">
@@ -42,6 +43,7 @@ The code generating the metrics above is shown here:
 <img width="700" alt="image" src="https://user-images.githubusercontent.com/114873837/225749470-65cb22fe-d07d-49d3-a80f-cc222d076d6c.png">
 
 **Oversampling with SMOTE**
+
 When using the SMOTE algorithm, we achieve the same resampling count as the RandomOverSampler method. 
 
 <img width="590" alt="image" src="https://user-images.githubusercontent.com/114873837/225695928-5437d856-2f97-45f7-9981-5146aee0412f.png">
