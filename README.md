@@ -27,11 +27,20 @@ After instantiating the RandomOverSampler command and resampling the data in pan
 
 <img width="499" alt="image" src="https://user-images.githubusercontent.com/114873837/225689284-436f0f8c-5b93-4924-b92c-ae8c792fcfec.png">
 
-After using this resampled data to train a logistic regression model, we generate the following results:
+
+After using this resampled data to train a logistic regression model, we generate the following results for the :
 * A balanced accuracy score of 65.47
 * 
 * 
 
+When using the SMOTE algorithm, we achieve the same resampling count as the RandomOverSampler method. 
+
+<img width="590" alt="image" src="https://user-images.githubusercontent.com/114873837/225695928-5437d856-2f97-45f7-9981-5146aee0412f.png">
+
+This logistic regression model results in the following performance measures:
+* A balanced accuracy score of 66.2
+* 
+* 
 
 ### Undersampling
 The undersampling technique utilized the ClusterCentroids algorithm. After using the ClusterCentroids algorithm, we can confirm that the majority class has been reduced to establish a balance between the classes.
