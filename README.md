@@ -34,8 +34,14 @@ After using this resampled data to train a logistic regression model, we generat
 
 
 ### Undersampling
-The undersampling technique utilized the ClusterCentroids algorithm.
+The undersampling technique utilized the ClusterCentroids algorithm. After using the ClusterCentroids algorithm, we can confirm that the majority class has been reduced to establish a balance between the classes.
 
+<img width="577" alt="image" src="https://user-images.githubusercontent.com/114873837/225691381-0b9947f1-b4f4-4a10-8df8-9a38f2404ae2.png">
+
+The logistic regression model run with the resampled data produces the following results:
+*
+*
+*
 
 ### Deliverable 2: SMOTEENN Model
 
