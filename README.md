@@ -16,14 +16,13 @@ The purpose of this analysis is to assess the performance of various machine lea
 
 
 ## Summary
+The best model performances (as measured by accuracy, precision, and recall) were observed in the ensemble modeling techniques. the Easy Ensemble Classifier was the clear winner. 
 
+* Random Oversampling: 65.47% accuracy, 1% precision, 72% recall, 2% F1 score
+* SMOTE Resampling: 66.2% accuracy, 1% precision, 63% recall, 2% F1 score
+* ClusterCentroids: 54.4% accuracy, 1% precision, 69% recall, 1% F1 score
+* SMOTEEN: 66.7% accuracy, 1% precision, 72% recall, 2% F1 score
+* Balanced Random Forest Classifier: 78.8% accuracy, 4% precision, 67% recall, 7% F1 score
+* Easy Ensemble Classifier: 91.9% accuracy, 7% precision, 90% recall, 14% F1 score
 
-For this deliverable, you’ll write a brief summary and analysis of the performance of all the machine learning models used in this Challenge.
-
-The report should contain the following:
-
-Overview of the analysis: Explain the purpose of this analysis.
-
-Results: Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all six machine learning models. Use screenshots of your outputs to support your results.
-
-Summary: Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. If you do not recommend any of the models, justify your reasoning.
+Based on the results, I would recommend using the Easy Ensemble Classifier to predict credit lending risk.
